@@ -8,8 +8,14 @@ export default () => {
         onFinish={async (values) => {
           console.log(values);
         }}
+        submitter={{
+          searchConfig: {
+            submitText: "Save Changes", // Change submit button text
+            resetText: "Clear Form", // Change reset button text
+          },
+        }}
       >
-        <ProFormText name="name" label="姓名" />
+        <ProFormText name="name" label="Your name" placeholder={"Please fill in your name"}/>
       </ProForm>
     </ProLayout>
   );
